@@ -1,0 +1,21 @@
+Persistence: Dados
+Domain: Classes
+Application: funçoes
+API: controllers
+
+
+Controller -> ActivitiesController:
+Usa as classes Do Application(Activities) 
+
+Criar a pasta Extensions dentro do API
+para o Program.cs ficar mais clean
+
+client project
+>app
+-> models: uma especie de classes
+
+>features
+->
+
+
+github -> video 8

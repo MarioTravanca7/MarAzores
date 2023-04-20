@@ -1,0 +1,74 @@
+Para criar os projetos abrir o bloco de notas que me deram no curso de React
+
+Criar Classes no domain
+
+instalar: microsoft.entityframework.sqlite 
+No Persistence! *Atraves do nuget
+
+Criar uma class DataContext no Persistence
+Ver como as outras estão criadas
+-gerar um constructor
+
+Adicionar no Program.cs
+builder.Services.AddDbContext<DataContext>(opt => 
+{
+    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+Adicionar no appsettings.development.json:
+"ConnectionStrings": {
+    "DefaultConnection" : "Data Source=activities.db"
+  }
+
+ir para "MarAzores" folder e instalar/update:
+dotnet tool update --global dotnet-ef
+
+"MarAzores" folder:
+instalar no nuget: microsoft.entityframeworkcore.design
+cmd: dotnet ef migrations add InitialCreate -s .\API\ -p .\Persistence\
+
+Abrir a Base de dados:
+ctrl + P -> >Sqlite  -> Open Data base -> escolher.db -> sepador: Sqlite Explorer
+
+cmd API: dotnet watch --no-hot-reload
+
+Criar um controller:
+BaseApiController -> Copiar o resto de um já feito* -> referente a ControllerBase
+
+Criar outro controller:
+OutroController -> referente ao BaseApiController
+
+Criar React project
+MarAzores: npx create-react-app client-app --use-npm --template typescript
+
+instalar o axios nos projetos react
+MarAzores: npm install axios
+client-app: npm install axios
+
+
+instalar o semantic-ui nos projetos react
+MarAzores: npm install semantic-ui-react semantic-ui-css
+client-app: npm install semantic-ui-react semantic-ui-css
+
+colocar no index.tsx:
+import 'semantic-ui-css/semantic.min.css'
+
+instalar no Application:
+RefreshMediatR.Extensions.Microsoft.DependencyInjection
+
+criar as classes no Application
+
+adicionar ao program.c: 
+builder.Services.AddMediatR(typeof(List.Handler));
+
+instalar no Application:
+AutoMapper.Extensions.Microsoft.DependencyInjection
+
+Criar a Core folder dentro do Application
+-> criar MappingProfiles.cs 
+-> começar a usar o AutoMapper no Edit.cs (por exemplo)
+
+---- React-----
+criar pastas no src folder.
+
+cmd marazores-app:npm i --save-dev @types/uuid
