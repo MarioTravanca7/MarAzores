@@ -72,3 +72,62 @@ Criar a Core folder dentro do Application
 criar pastas no src folder.
 
 cmd marazores-app:npm i --save-dev @types/uuid
+
+cmd marazores-app: npm install mobx mobx-react-lite
+
+criar a pasta stores por causa do Mobx
+
+index.tsx
+<StoreContext.Provider value={store}>
+...
+</StoreContext.Provider >
+
+
+github -> video 8
+
+
+
+Criar Axios para acesso ao backend
+
+
+Mobx: clean code 
+criar activityStore.ts
+->com as funçoes que estão no App.tsx
+-> agora não são funcoes do App.tsx mas sim metodos da class activityStore
+
+Criar variavel nos ficheiros para activityStore e usa los para chamar os metodos
+-> const {activityStore} = useStore();
+
+
+--Routing: https://reactrouter.com/en/dev/upgrading/v5
+instalar: 
+cmd marazores-app: npm install react-router-dom
+-criar uma pasta router -> Routes.tsx
+-Alterar o index.tsx
+-criar pasta home dentro das features
+
+
+-------Modulo 10------------------------
+--Error Handling 
+-> >nuget
+-> FluentValidation.AspNetCore
+-> instlar em: Application.csproj
+
+-> Creta.cs e os outros
+-->criar :
+        public class CommandValidator : AbstractValidator<Command>{}
+criar também a classe auxiliar ActivityValidator
+
+->ApplicationServiceExtension.cs:
+adicionar:
+  services.AddFluentValidationAutoValidation();
+  services.AddValidatorsFromAssemblyContaining<Create>();
+se der erro "dotnet restore"
+
+cmd api: dotnet watch --no-hot-reload
+cmd marazores-app: npm install react-toastify
+cmd marazores: dotnet ef database drop -s API -p Persistence
+cmd api: dotnet watch --no-hot-reload
+
+
+---------------------Modulo 10--------------------------------------

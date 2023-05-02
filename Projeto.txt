@@ -18,4 +18,9 @@ client project
 ->
 
 
-github -> video 8
+
+
+
+
+websites:
+https://docs.fluentvalidation.net/en/latest/
