@@ -1,21 +1,23 @@
 import { Button, Item, Label, Segment } from "semantic-ui-react";
-import { Activity } from "../../../app/models/activity";
+import { SyntheticEvent, useState } from "react";
+import { useStore } from "../../../app/stores/store";
+import { observer } from "mobx-react-lite";
+import { Link, NavLink } from "react-router-dom";
 
-interface Props {
-  activities: Activity[];
-  selectActivity: (id: string) => void;
-  deleteActivity: (id: string) => void;
-}
+export default observer( function ActivityList() {
+  const {activityStore} = useStore();
+  const {deleteActivity, activitiesByTitle, loading} = activityStore;
+  const [target, setTarget] = useState("");
 
-export default function ActiivityList({
-  activities,
-  selectActivity,
-  deleteActivity,
-}: Props) {
+  function handleActivityDelete(e: SyntheticEvent<HTMLButtonElement>, id: string) {
+    setTarget(e.currentTarget.name);
+    deleteActivity(id);
+  }
+ 
   return (
     <Segment>
       <Item.Group divided>
-        {activities.map((activity) => (
+        {activitiesByTitle.map((activity) => (
           <Item key={activity.id}>
             <Item.Content>
               <Item.Header as="a">{activity.title}</Item.Header>
@@ -25,13 +27,15 @@ export default function ActiivityList({
               </Item.Description>
               <Item.Extra>
                 <Button
-                  onClick={() => selectActivity(activity.id)}
+                   as={Link} to={`/activities/${activity.id}`}
                   floated="right"
                   content="Ver"
                   color="blue"
                 />
                 <Button
-                  onClick={() => deleteActivity(activity.id)}
+                  name={activity.id}
+                  loading={loading &&  target === activity.id}
+                  onClick={(e) => handleActivityDelete(e, activity.id)}
                   floated="right"
                   content="Apagar"
                   color="red"
@@ -44,4 +48,4 @@ export default function ActiivityList({
       </Item.Group>
     </Segment>
   );
-}
+})
