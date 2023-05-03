@@ -131,3 +131,20 @@ cmd api: dotnet watch --no-hot-reload
 
 
 ---------------------Modulo 10--------------------------------------
+
+---------------------Modulo 11--------------------------------------
+https://formik.org/
+
+cmd marazores-app: npm install formik
+cmd marazores-app: npm install yup
+cmd marazores-app: npm install @types/yup --save-dev
+cmd marazores-app:npm install react-datepicker
+cmd marazores-app:npm install @types/react-datepicker --save-dev
+
+
+
+
+
+
+
+---------------------Modulo 11--------------------------------------

@@ -24,3 +24,5 @@ client project
 
 websites:
 https://docs.fluentvalidation.net/en/latest/
+https://formik.org/ -> formularios
+https://www.npmjs.com/package/react-datepicker  -> trabalhar com datas
