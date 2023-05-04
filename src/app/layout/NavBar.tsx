@@ -1,15 +1,16 @@
 import { Button, Container, Menu } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
+import LogoImage from "../../../src/assets/marAzores.png";
 
 export default function NavBar() {
   return (
-    <Menu inverted fixed="top">
+    <Menu inverted fixed="top" style={{ marginTop: 0, marginBottom: 0, height: '50px' }}>
       <Container>
         <Menu.Item as={NavLink} to="/" header>
           <img
-            src="/assets/logo.png"
-            alt="logo"
-            style={{ marginRight: "10px" }}
+            src={LogoImage}
+            alt='logo'
+            style={{marginRight: 10, width: '70px', height: '50px'}}
           />
           Back Office
         </Menu.Item>
@@ -18,7 +19,7 @@ export default function NavBar() {
         <Menu.Item as={NavLink} to="/activities" name="Team" />
 
         <Menu.Item as={NavLink} to="/activities" name="Activities" />
-        <Menu.Item as={NavLink} to="/errors" name="Errors" />
+        {/* <Menu.Item as={NavLink} to="/errors" name="Errors" /> */}
         <Menu.Item>
           <Button
             as={NavLink} to="/createActivity"
