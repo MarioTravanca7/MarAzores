@@ -17,7 +17,7 @@ client project
 >features
 ->
 
-
+pasta DTOs ??? está a auxiliar o login
 
 
 
@@ -26,3 +26,10 @@ websites:
 https://docs.fluentvalidation.net/en/latest/
 https://formik.org/ -> formularios
 https://www.npmjs.com/package/react-datepicker  -> trabalhar com datas
+
+
+
+
+
+---create New migrations
+cmd marazores: dotnet ef migrations add IdentityAdded -p Persistence -s API

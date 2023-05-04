@@ -1,0 +1,6 @@
+criar no Domain Team.cs
+dotnet ef migrations add TeamAdded -p Persistence -s API
+dotnet watch no-hot-reload
+
+Application -> folder Team = Activities
+Controllers -> TeamController

@@ -148,3 +148,33 @@ cmd marazores-app:npm install @types/react-datepicker --save-dev
 
 
 ---------------------Modulo 11--------------------------------------
+
+---------------------Modulo 12--------------------------------------
+
+nuget install: -> Domain
+RefreshMicrosoft.AspNetCore.Identity.EntityFrameworkCore 
+-> por causa do App User
+
+---create New migrations
+cmd marazores: dotnet ef migrations add IdentityAdded -p Persistence -s API
+
+criar IdentityServiceExtensions, alterar o Seed (add users), etc...
+
+cmd: dotnet watch no-hot-reload : supostamente é para aparecer os users na tabela
+
+ctrl + p -> >Sqlite Open Database
+
+novo controller -> dotnet watch no-hot-reload
+
+TokenService: -> nuget : API
+System.IdentityModel.Tokens.Jwt 
+
+
+Authentication: -> nuget : API
+Microsoft.AspNetCore.Authentication.JwtBearer 
+
+
+
+
+
+---------------------Modulo 12--------------------------------------
