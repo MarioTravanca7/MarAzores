@@ -21,6 +21,16 @@ export default class ActivityStore {
     //return Array.from(this.activityRegistry.values()).sort((a, b) => Date.parse(a.date) - Date.parse(b.Date));
   }
 
+  get groupedActivities() {
+    return Object.entries(
+      this.activitiesByTitle.reduce((activities, activity) => {
+        const title = activity.title;
+        activities[title] = activities[title] ? [...activities[title], activity] : [activity];
+        return activities;
+      }, {} as {[key: string]: Activity[]})
+    )
+  }
+
   //function's que estão/estavam dentro do App.tsx
   loadActivities = async () => {
     this.setLoadingInitial(true);
