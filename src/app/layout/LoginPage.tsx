@@ -40,7 +40,7 @@ export default observer(function LoginPage() {
               size="huge"
               inverted
             >
-              Register!
+              Register
             </Button>
           </>
         )}
