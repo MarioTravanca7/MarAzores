@@ -4,3 +4,12 @@ dotnet watch no-hot-reload
 
 Application -> folder Team = Activities
 Controllers -> TeamController
+
+
+Pagina Principal
+dá acesso a uma pagina com
+Atividades e equipa, sobre nós etc...
+
+será preciso colocar "/" para aceder a pagina do login
+dentro do login é que irá ter o botão register
+e o adicionar Atividades e Team

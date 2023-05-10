@@ -19,7 +19,10 @@ client project
 
 pasta DTOs ??? está a auxiliar o login
 
-
+Infrastructure
+dotnet new classlib -n Infrastructure
+dotnet sln add Infrastructure
+dotnet add reference ../Application
 
 
 websites:

@@ -13,6 +13,8 @@ namespace Domain
        // [Required]
         public string Title { get; set; } // nome da atividade
         public string Description { get; set; } // descrição da atividade
+        public ICollection<ActivityAttendee> AttendeesActivity { get; set; } = new List<ActivityAttendee>();
+        public bool IsCancelled { get; set; }
 
     }
 }

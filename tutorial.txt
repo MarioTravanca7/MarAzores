@@ -176,5 +176,57 @@ Microsoft.AspNetCore.Authentication.JwtBearer
 
 
 
-
 ---------------------Modulo 12--------------------------------------
+
+
+---------------------Modulo 13--------------------------------------
+
+//o erro no register ficou
+
+
+---------------------Modulo 13--------------------------------------
+
+
+---------------------Modulo 14--------------------------------------
+
+entityframework Relationships
+
+Many to Many
+Activity - AppUser
+Activity:
+public ICollection<AppUser> AttendeesActivity { get; set; }
+AppUser:
+public ICollection<Activity> ActivitiesAppUser { get; set; }
+
+MarAzores cmd: dotnet ef migrations add ActivityAttendee -p Persistence -s API
+MarAzores cmd: dotnet ef migrations remove -p Persistence -s API
+
+
+criar o projecto Infrastructure
+MarAzores cmd: dotnet new classlib -n Infrastructure 
+MarAzores cmd: dotnet sln add Infrastructure
+MarAzores cmd: dotnet add reference ../Application
+API cmd: dotnet add reference ..\Infrastructure\
+MarAzores cmd:dotnet restore
+
+add to ApplicationServiceExtensions:
+services.AddHttpContextAccessor();
+services.AddScoped<IUserAccessor, UserAccessor>();
+
+
+MarAzores cmd: dotnet ef migrations add AddCancelledProperty -p Persistence -s API
+
+//apagar a base de dados
+MarAzores cmd: dotnet ef database drop -p Persistence -s API
+//cria outra vez a base de dados
+MarAzores/api cmd:dotnet watch run
+
+//se der erro:
+1.  Delete the migrations folder.
+2. Create a new migration.
+3. Drop the DB
+4. Restart the app
+
+
+
+---------------------Modulo 14--------------------------------------
