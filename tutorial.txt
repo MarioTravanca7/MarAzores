@@ -230,3 +230,22 @@ MarAzores/api cmd:dotnet watch run
 
 
 ---------------------Modulo 14--------------------------------------
+
+---------------------Modulo 16--------------------------------------
+Photos
+
+https://console.cloudinary.com/console/c-1e538fcf48fbf284f30d6d3c535c15/getting-started
+
+>nuget
+CloudinaryDotNet -> Infrastructure
+
+API -> appsettings.json
+adicionar "Cloudinary" e ir buscar os dados ao nosso dashboard do cloudinary.com
+
+ApplicationServiceExtensions adicionar esta linha:
+services.Configure<CloudinarySettings>(config.GetSection("Cloudinary"));
+
+---create New migrations
+cmd marazores: dotnet ef migrations add "nome" -p Persistence -s API
+
+---------------------Modulo 16--------------------------------------

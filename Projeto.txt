@@ -29,6 +29,7 @@ websites:
 https://docs.fluentvalidation.net/en/latest/
 https://formik.org/ -> formularios
 https://www.npmjs.com/package/react-datepicker  -> trabalhar com datas
+https://console.cloudinary.com/console/c-1e538fcf48fbf284f30d6d3c535c15/getting-started -> Photos
 
 
 

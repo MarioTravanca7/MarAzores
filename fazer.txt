@@ -13,3 +13,5 @@ Atividades e equipa, sobre nós etc...
 será preciso colocar "/" para aceder a pagina do login
 dentro do login é que irá ter o botão register
 e o adicionar Atividades e Team
+
+Base de dados ver Modulo 14 no tutorial
